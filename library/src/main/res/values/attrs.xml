@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="BannerView">
+        <attr name="showIndicator" format="boolean" />
+        <attr name="showNavBtns" format="boolean" />
+        <attr name="nextNavBtn" format="reference" />
+        <attr name="prevNavBtn" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="BannerIndicatorView">
+        <attr name="drawablePadding" format="dimension"/>
+        <attr name="activeDrawable" format="reference"/>
+        <attr name="activeColor" format="color"/>
+        <attr name="activeRadius" format="dimension"/>
+        <attr name="inactiveDrawable" format="reference"/>
+        <attr name="inactiveColor" format="color"/>
+        <attr name="inactiveRadius" format="dimension"/>
+    </declare-styleable>
+</resources>
