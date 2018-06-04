@@ -13,3 +13,8 @@ dependencies {
     implementation 'com.github.alexxxdev:BannerView:-SNAPSHOT'
 }
 ```
+
+
+
+![alt text](
+https://github.com/alexxxdev/BannerView/blob/master/image.gif)
