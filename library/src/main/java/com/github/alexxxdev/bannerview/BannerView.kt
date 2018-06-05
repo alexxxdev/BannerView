@@ -48,6 +48,12 @@ class BannerView (context: Context, attributeSet: AttributeSet)
                 buttonPrev.setOnClickListener { bannerLayoutManager.prev() }
                 buttonNext.setOnClickListener { bannerLayoutManager.next() }
             }
+
+            val indicatorMarginBottom = a.getDimensionPixelSize(R.styleable.BannerView_indicatorMarginBottom, -1)
+            if(indicatorMarginBottom>=0){
+                val marginLayoutParams = indicator.layoutParams as MarginLayoutParams
+                marginLayoutParams.bottomMargin = indicatorMarginBottom
+            }
         } finally {
             a.recycle()
         }

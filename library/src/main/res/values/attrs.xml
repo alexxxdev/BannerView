@@ -5,6 +5,7 @@
         <attr name="showNavBtns" format="boolean" />
         <attr name="nextNavBtn" format="reference" />
         <attr name="prevNavBtn" format="reference" />
+        <attr name="indicatorMarginBottom" format="dimension" />
     </declare-styleable>
 
     <declare-styleable name="BannerIndicatorView">
