@@ -1,6 +1,8 @@
 package com.github.alexxxdev.bannerview
 
 import android.content.Context
+import android.support.v4.view.ViewCompat
+import android.support.v7.content.res.AppCompatResources
 import android.support.v7.widget.OrientationHelper
 import android.support.v7.widget.RecyclerView
 import android.util.AttributeSet
@@ -39,9 +41,14 @@ class BannerView (context: Context, attributeSet: AttributeSet)
 
             val showNavsBtns = a.getBoolean(R.styleable.BannerView_showNavBtns, false)
             if(showNavsBtns){
-                a.getDrawable(R.styleable.BannerView_nextNavBtn)?.let { buttonNext.setImageDrawable(it) }
-                a.getDrawable(R.styleable.BannerView_prevNavBtn)?.let { buttonPrev.setImageDrawable(it) }
-
+                val drawableNextNavBtn = a.getResourceId(R.styleable.BannerView_nextNavBtn, -1)
+                val drawablePrevNavBtn = a.getResourceId(R.styleable.BannerView_prevNavBtn, -1)
+                if(drawableNextNavBtn!=-1) {
+                    buttonNext.setImageDrawable(AppCompatResources.getDrawable(context, drawableNextNavBtn))
+                }
+                if(drawablePrevNavBtn!=-1) {
+                    buttonPrev.setImageDrawable(AppCompatResources.getDrawable(context, drawablePrevNavBtn))
+                }
                 buttonPrev.visibility = View.VISIBLE
                 buttonNext.visibility = View.VISIBLE
 
